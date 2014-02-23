@@ -64,10 +64,10 @@ function check_sitemap ($sitemap_url, $curl_requests) {
            $url_array = json_decode(json_encode($xml_objects), TRUE);
            check_urls($sitemap_url, $url_array['url'], $curl_requests);
        } else {
-           print_message(500, "????", "Invalid sitemap url", $sitemap_url);
+           print_message(500, "????", $sitemap_url,"Invalid sitemap or sitemap index file");
        }     
     } else {
-        print_message(404, "????", "Sitemap file not found", $sitemap_url);  
+        print_message(404, "????",  $sitemap_url,"Sitemap file not found");  
     }   
 }
 
