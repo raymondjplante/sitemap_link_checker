@@ -119,7 +119,7 @@ function check_urls($sitemap_url, array $url_array, $curl_requests) {
         foreach ($handles as $url =>  $handle) {
             $http_status = curl_getinfo($handle, CURLINFO_HTTP_CODE);
             
-            $message = "Link Good"; 
+            $message = $http_status == 200 ? "Good Link" : "Bad Link"; 
             if($http_status == 301 || $http_status == 302) {
                 $redirect = curl_getinfo($handle, CURLINFO_REDIRECT_URL);
                 $message = "Redirected to: $redirect";
