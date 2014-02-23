@@ -22,7 +22,7 @@
  *      3. This doesn't validate the structure of your sitemap files.
  *      4. The max number of concurrent requests is optional, by default it will run one at a time.  There is no forced limit to
  *         the number you can specify, so feel free to happily shoot both your and the server you're hitting's feet completely off.
- *      5. Some versions of PHP have problems with curl multi connect functionality and will  
+ *      5. Some versions of PHP have problems with curl multi connect functionality and will simply hang.  Ran successfully with 5.4.17
  *          
  * Notes for SITEMAP INDEX files ONLY:
  *     1. For simplicity, errors with SITEMAP INDEX files (those listing other sitemap files) are written to this file as well.
